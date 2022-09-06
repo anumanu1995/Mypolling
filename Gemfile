@@ -74,3 +74,6 @@ end
 # adding boostrap
 gem 'cssbundling-rails'
 gem 'devise'
+gem "font-awesome-rails"
+gem 'jquery-rails'
+gem "bootstrap"
