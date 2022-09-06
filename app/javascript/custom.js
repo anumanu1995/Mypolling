@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-    alert("hnhnnh");
     "use strict";
 
 
