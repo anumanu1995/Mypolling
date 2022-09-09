@@ -1,0 +1,51 @@
+
+  <div class="container-fluid px-4">
+
+  <h1 class="mt-4">Candidates</h1>
+   <ol class="breadcrumb mb-4">
+                            <%# <li class="breadcrumb-item active">Dashboard</li> %>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                List
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Age</th>
+                                            <th>Address</th>
+                                            <th>Polling status</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                             <th>Name</th>
+                                            <th>Age</th>
+                                            <th>Address</th>
+                                            <th>Polling status</th>
+                                        </tr>
+                                    </tfoot>
+                                  <tbody>
+                                  <% @candidates.each  do |c| %>
+                                    <tr>
+                                        <td><%= "#{c.candidate_fname} #{c.candidate_lname}" %></td>
+                                        <td><%= c.candidate_age %></td>
+                                        <td><%= c.candidate_address %></td>
+                                        <td><% if c.Polloption_id.nil? %>
+                                        <i class='fa-solid fa-close'></i>
+                                        <% else %>
+                                        <i class='fa-solid fa-check'></i>
+                                        <% end %>
+                                        </td>
+                                        
+                                    </tr>
+                                    <% end %>
+                                   </tbody>
+                                </table>
+                            </div>
+                        </div>
+  </div>
