@@ -1,0 +1,35 @@
+
+<%= form_with model: candidate do |form| %>
+  <div>
+    <%= form.label :First_Name %><br>
+    <%= form.text_field :candidate_fname %>
+     <% candidate.errors.full_messages_for(:candidate_fname).each do |message| %>
+      <div style="color:red"><%= message %></div>
+    <% end %>
+  </div>
+   <div>
+    <%= form.label :Last_Name %><br>
+    <%= form.text_field :candidate_lname %>
+    <% candidate.errors.full_messages_for(:candidate_lname).each do |message| %>
+      <div style="color:red"><%= message %></div>
+    <% end %>
+  </div>
+   <div>
+    <%= form.label :Age %><br>
+    <%= form.text_field :candidate_age %>
+    <% candidate.errors.full_messages_for(:candidate_age).each do |message| %>
+      <div style="color:red"><%= message %></div>
+    <% end %>
+  </div>
+   <div>
+    <%= form.label :Address %><br>
+    <%= form.text_field :candidate_address %>
+    <% candidate.errors.full_messages_for(:candidate_address).each do |message| %>
+      <div style="color:red"><%= message %></div>
+    <% end %>
+  </div>
+   <div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

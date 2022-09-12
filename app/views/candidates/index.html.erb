@@ -18,15 +18,16 @@
                                             <th>Age</th>
                                             <th>Address</th>
                                             <th>Polling status</th>
-                                           
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                             <th>Name</th>
+                                            <th>Name</th>
                                             <th>Age</th>
                                             <th>Address</th>
                                             <th>Polling status</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </tfoot>
                                   <tbody>
@@ -41,7 +42,11 @@
                                         <i class='fa-solid fa-check'></i>
                                         <% end %>
                                         </td>
-                                        
+                                        <td>
+                                       <%= button_to "Edit", edit_candidate_path(c),method: :get,class:"btn btn-secondary" %>
+                                        <span style="padding:10px"><%= button_to "Delete", candidate_path(c),method: :delete, data: {
+                    confirm: "Are you sure?"
+                  } ,class:"btn btn-danger" %></span></td>
                                     </tr>
                                     <% end %>
                                    </tbody>

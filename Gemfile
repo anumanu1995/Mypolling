@@ -77,3 +77,4 @@ gem 'devise'
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem "bootstrap"
+gem "erb_lint"

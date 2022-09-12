@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      candidate:
+        candidate_fname: "First Name"
+        candidate_lname: "Last Name"
+        candidate_age: "Age"
+        candidate_address: "Address"
