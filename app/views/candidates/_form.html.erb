@@ -1,35 +1,35 @@
 
 <%= form_with model: candidate do |form| %>
-  <div>
-    <%= form.label :First_Name %><br>
-    <%= form.text_field :candidate_fname %>
+  <div class="form-outline mb-4">
+    <%= form.label :First_Name, class:"form-label" %>
+    <%= form.text_field :candidate_fname , class:"form-control"%>
      <% candidate.errors.full_messages_for(:candidate_fname).each do |message| %>
       <div style="color:red"><%= message %></div>
     <% end %>
   </div>
-   <div>
-    <%= form.label :Last_Name %><br>
-    <%= form.text_field :candidate_lname %>
+   <div class="form-outline mb-4">
+    <%= form.label :Last_Name , class:"form-label" %>
+    <%= form.text_field :candidate_lname, class:"form-control" %>
     <% candidate.errors.full_messages_for(:candidate_lname).each do |message| %>
       <div style="color:red"><%= message %></div>
     <% end %>
   </div>
-   <div>
-    <%= form.label :Age %><br>
-    <%= form.text_field :candidate_age %>
+   <div class="form-outline mb-4">
+    <%= form.label :Age , class:"form-label" %>
+    <%= form.text_field :candidate_age, class:"form-control" %>
     <% candidate.errors.full_messages_for(:candidate_age).each do |message| %>
       <div style="color:red"><%= message %></div>
     <% end %>
   </div>
-   <div>
-    <%= form.label :Address %><br>
-    <%= form.text_field :candidate_address %>
+   <div class="form-outline mb-4">
+    <%= form.label :Address , class:"form-label" %>
+    <%= form.text_field :candidate_address, class:"form-control" %>
     <% candidate.errors.full_messages_for(:candidate_address).each do |message| %>
       <div style="color:red"><%= message %></div>
     <% end %>
   </div>
    <div>
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
