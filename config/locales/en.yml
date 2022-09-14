@@ -37,3 +37,5 @@ en:
         candidate_lname: "Last Name"
         candidate_age: "Age"
         candidate_address: "Address"
+      polldetail:
+        Polloption_id: "Answer"
