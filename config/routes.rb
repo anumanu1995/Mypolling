@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   resources :candidates
+  resources :polldetails
   # get 'candidates' , to: 'candidate#index'
 end

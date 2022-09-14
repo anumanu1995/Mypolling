@@ -1,4 +1,6 @@
-
+<% content_for :header do %>
+<%= javascript_import_module_tag "datatables_demo" %>
+<% end %>
   <div class="container-fluid px-4">
 
   <h1 class="mt-4">Candidates</h1>
@@ -54,3 +56,6 @@
                             </div>
                         </div>
   </div>
+   <% content_for :footer do %>
+     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<% end %>
