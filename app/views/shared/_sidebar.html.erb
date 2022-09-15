@@ -15,7 +15,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <%= link_to "Create Polls", new_polldetail_path, class:"nav-link" %>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Polling Details</a>
+                                    <%= link_to "Polling Details",polldetails_path, class:"nav-link" %>
                                 </nav>
                             </div>
                              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                       <%= current_user.email %>
                     </div>
                 </nav>
             </div>

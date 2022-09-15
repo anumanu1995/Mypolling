@@ -1,0 +1,49 @@
+<% content_for :header do %>
+<%= javascript_import_module_tag "datatables_demo" %>
+<% end %>
+  <div class="container-fluid px-4">
+
+  <h1 class="mt-4">Polling Details</h1>
+   <ol class="breadcrumb mb-4">
+                            <%# <li class="breadcrumb-item active">Dashboard</li> %>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                List
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Poll</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Poll</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                  <tbody>
+                                  <% @candidates.each  do |c| %>
+                                    <tr>
+                                        <td><%= c.name %></td>
+                                        <td><%= c.poll_option %></td>
+                                        <td>
+                                        <span style="padding:10px"><%= button_to "Delete", polldetail_path(c),method: :delete, data: {
+                    confirm: "Are you sure?"
+                  } ,class:"btn btn-danger" %></span></td>
+                                    </tr>
+                                    <% end %>
+                                   </tbody>
+                                </table>
+                            </div>
+                        </div>
+  </div>
+   <% content_for :footer do %>
+     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<% end %>
