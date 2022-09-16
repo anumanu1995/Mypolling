@@ -16,7 +16,7 @@ class PolldetailsController < ApplicationController
         @pollquestion = @@pollquestion
         @polldetail = Polldetail.new(polldetail_params)
         if @polldetail.save
-            redirect_to root_path
+            redirect_to polldetails_path
         else
             render :new, status: :unprocessable_entity
         end

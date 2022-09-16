@@ -7,6 +7,5 @@ class HomeController < ApplicationController
     @polloptions = Polloption.all
     @candidate_count = Candidate.all.count
     @poll_count = Polldetail.all.count
-
   end
 end
